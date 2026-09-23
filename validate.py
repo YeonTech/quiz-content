@@ -24,10 +24,12 @@ for entry in idx.get("sets", []):
         qid = q.get("id", f"{f}#{i}")
         if qid in ids: errors.append(f"{qid}: id 중복")
         ids.add(qid)
-        if len(q.get("choices", [])) != 4: errors.append(f"{qid}: choices가 4개 아님")
-        if len(q.get("choiceExplanations", [])) != 4: errors.append(f"{qid}: choiceExplanations가 4개 아님")
-        if not isinstance(q.get("answer"), int) or not (0 <= q.get("answer", -1) <= 3):
-            errors.append(f"{qid}: answer는 0~3 정수여야 함")
+        nc=len(q.get("choices", []))
+        if nc < 2: errors.append(f"{qid}: choices는 2개 이상")
+        ce=len(q.get("choiceExplanations", []))
+        if ce != nc: errors.append(f"{qid}: choiceExplanations({ce})가 choices({nc})와 개수 불일치")
+        if not isinstance(q.get("answer"), int) or not (0 <= q.get("answer", -1) < nc):
+            errors.append(f"{qid}: answer가 보기 범위 밖")
         if not q.get("topic"): errors.append(f"{qid}: topic 비어있음")
         for k in ("prompt", "explanation"):
             if not q.get(k): errors.append(f"{qid}: {k} 비어있음")
