@@ -1,0 +1,10 @@
+{
+  "version": "2026-09-23T03:23:11Z",
+  "sets": [
+    {
+      "id": "minsang-01",
+      "file": "sets/minsang-01.json",
+      "title": "민상법 기초 1"
+    }
+  ]
+}
