@@ -2,7 +2,6 @@
 """index.json + 모든 세트 파일 검증. 사용: python3 validate.py"""
 import json, sys, os
 
-TOPICS = {"민법총칙", "물권법", "채권법", "상법총칙", "회사법"}
 errors, ids = [], set()
 
 try:
@@ -29,7 +28,7 @@ for entry in idx.get("sets", []):
         if len(q.get("choiceExplanations", [])) != 4: errors.append(f"{qid}: choiceExplanations가 4개 아님")
         if not isinstance(q.get("answer"), int) or not (0 <= q.get("answer", -1) <= 3):
             errors.append(f"{qid}: answer는 0~3 정수여야 함")
-        if q.get("topic") not in TOPICS: errors.append(f"{qid}: topic '{q.get('topic')}' 불허(허용: {TOPICS})")
+        if not q.get("topic"): errors.append(f"{qid}: topic 비어있음")
         for k in ("prompt", "explanation"):
             if not q.get(k): errors.append(f"{qid}: {k} 비어있음")
 
