@@ -1,5 +1,5 @@
 {
-  "version": "2026-09-26T03:20:24Z",
+  "version": "2026-09-26T09:21:54Z",
   "sets": [
     {
       "id": "minsang",
@@ -20,6 +20,11 @@
       "id": "minsang-advanced",
       "file": "sets/minsang_advanced_source_grounded_450.json",
       "title": "민상법 심화(교재근거)"
+    },
+    {
+      "id": "minsang-cases",
+      "file": "sets/minsang-cases.json",
+      "title": "민상법 사례(교재 재생성)"
     }
   ]
 }
