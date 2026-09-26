@@ -1,5 +1,5 @@
 {
-  "version": "2026-09-26T09:21:54Z",
+  "version": "2026-09-26T13:32:28Z",
   "sets": [
     {
       "id": "minsang",
@@ -25,6 +25,11 @@
       "id": "minsang-cases",
       "file": "sets/minsang-cases.json",
       "title": "민상법 사례(교재 재생성)"
+    },
+    {
+      "id": "minsang-hard",
+      "file": "sets/minsang-hard.json",
+      "title": "민상법 고난도"
     }
   ]
 }
