@@ -1,5 +1,5 @@
 {
-  "version": "2026-09-30T12:42:20Z",
+  "version": "2026-09-30T13:24:20Z",
   "sets": [
     {
       "id": "minsang",
@@ -35,6 +35,11 @@
       "id": "minsang-gap-01",
       "file": "sets/minsang-gap-01.json",
       "title": "미출제 절 보강 01 — 물권법"
+    },
+    {
+      "id": "minsang-gap-full",
+      "file": "sets/minsang-gap-full.json",
+      "title": "미출제 절 전면 보강 — 교재 3권 전 범위"
     }
   ]
 }
